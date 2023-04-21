@@ -1,0 +1,29 @@
+<div class="card highlight-card card-small">
+  <input type="text" (keyup)="applyFilter($event)">
+</div>
+
+<table style="width:100%">
+  <thead>
+    <tr>
+      <th>NOMBRE</th>
+      <th>LASTNAME</th>
+      <th>EMAIL</th>
+      <th>AGE</th>
+      <th>QUOTA</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let user of user">
+      <tr>
+
+        <td>{{user.name}}</td>
+        <td>{{user.lastname}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.quota}}</td>
+
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
